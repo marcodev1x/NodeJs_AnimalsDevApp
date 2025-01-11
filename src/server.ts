@@ -14,6 +14,7 @@ server.set("views", path.join(__dirname, "views"));
 server.engine("mustache", mustacheExpress());
 
 server.use(express.static(path.join(__dirname, "../public")));
+server.use(express.static(path.join(__dirname, "./views/")));
 server.use(router);
 
 server.use((req, res) => {
